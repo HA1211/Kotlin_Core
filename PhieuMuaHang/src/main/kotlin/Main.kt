@@ -1,39 +1,25 @@
-import java.text.SimpleDateFormat
-import java.util.Calendar
-import java.util.SimpleTimeZone
 
-val tv = Tivi("Tivi")
 
-val quat = Quat("Quat")
-
-val mobi = Mobi("Mobi")
-
+val listHang = ArrayList<HangHoa>()
 
 fun main() {
 
-    val cal = Calendar.getInstance()
-    val dateFm = SimpleDateFormat("dd/MM/yyyy")
-    val fmDate = dateFm.format(cal.time)
+    var pmh = PhieuMuaHang()
+    pmh.nhapPhieu("PHIEU MUA HANG", 1,"PH01")
+
+    val hangHoa = HangHoa()
+
+    var h1 = HangHoa(1,"Tivi",30.0, 2)
+    var h2 = HangHoa(2,"Quat",1.2,  3)
+    var h3 = HangHoa(3,"Mobi",5.0, 10)
+
+    listHang.add(h1)
+    listHang.add(h2)
+    listHang.add(h3)
 
 
-    tv.create(30.0, 2)
-    quat.create(1.2, 3)
-    mobi.create(5.0, 10)
-    println(String.format("%45s", "PHIEU MUA HANG"))
+    println(String.format("%40s", pmh.ten))
+    pmh.show1()
+    hangHoa.hienThi()
 
-    println(String.format("%25s %30s", "Ma phieu: PH01", "Ngay lap: $fmDate"))
-
-
-    println(String.format("%15s %15s %15s %15s", "Ten hang", "Don gia", "So luong", "Thanh tien"))
-    println(String.format("%15s %15s %15s %15s",tv.name , tv.donGia, tv.soLuong, tv.thanhToan()))
-    println(String.format("%15s %15s %15s %15.1f",quat.name , quat.donGia, quat.soLuong, quat.thanhToan()))
-    println(String.format("%15s %15s %15s %15s",mobi.name , mobi.donGia, mobi.soLuong, mobi.thanhToan()))
-    println(String.format("%52s %10s", "Cong thanh tien", tong()))
-}
-
-
-
-fun tong(): Double{
-    var tong = tv.thanhToan() + quat.thanhToan() + mobi.thanhToan()
-    return tong
 }

@@ -1,14 +1,31 @@
-open class HangHoa(
+class HangHoa(
+    var id: Int = 0,
+    var name: String = "",
     var donGia: Double  = 0.0,
     var soLuong: Int = 0
 ) {
 
+//    fun nhapHang(id: Int,name: String,donGia: Double, soLuong: Int){
+//        this.id = id
+//        this.name = name
+//        this.donGia = donGia
+//        this.soLuong = soLuong
+//    }
 
-    fun create(donGia: Double, soLuong: Int){
-        this.donGia = donGia
-        this.soLuong = soLuong
+    fun hienThi(){
+        println(String.format("%15s %15s %15s %15s", "Ten hang", "Don gia", "So luong", "Thanh tien"))
+            var tong = 0.0
+            listHang.forEach {
+                println(String.format("%15s %15s %15s %15.1f", it.name, it.donGia, it.soLuong, it.thanhTien()))
+                tong += it.thanhTien()
+            }
+
+        println(String.format("%15s %15s %15s %15s","","","Cong thanh tien", tong))
+
     }
-    fun thanhToan(): Double {
+
+
+    fun thanhTien(): Double {
         var thanhTien = donGia * soLuong
         return thanhTien
     }

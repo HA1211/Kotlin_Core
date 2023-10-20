@@ -1,7 +1,7 @@
 
 
 var listKySu = ArrayList<KySu>()
-val namTNArray = ArrayList<Int>()
+
 
 fun main(){
     addKySu("hiep", "24/08/2002", "dc", "attt", 2023)
