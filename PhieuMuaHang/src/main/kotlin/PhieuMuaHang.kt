@@ -1,18 +1,16 @@
 class PhieuMuaHang (
     var id: Int = 0,
-    var ten: String = "",
+    var ten: String = "PHIEU MUA HANG",
     var maPhieu:String = "",
     var ngayLap:Date = Date(),
 ){
 
-    fun nhapPhieu(ten: String ,id: Int,maPhieu: String){
-        this.ten = ten
-        this.id = id
+    fun nhapPhieu(maPhieu: String){
         this.maPhieu = maPhieu
         this.ngayLap = Util.getDateNow()
     }
 
     fun show1(){
-        println(String.format("%20s %20s %20s %20s","Ma phieu: $maPhieu","" ,"Ngay lap: ${ngayLap.showDate()}",""))
+        println(String.format("%40s \n %20s %20s %20s %20s",ten,"Ma phieu: $maPhieu","" ,"Ngay lap: ${ngayLap.showDate()}",""))
     }
 }

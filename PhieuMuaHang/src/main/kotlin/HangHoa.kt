@@ -5,13 +5,6 @@ class HangHoa(
     var soLuong: Int = 0
 ) {
 
-//    fun nhapHang(id: Int,name: String,donGia: Double, soLuong: Int){
-//        this.id = id
-//        this.name = name
-//        this.donGia = donGia
-//        this.soLuong = soLuong
-//    }
-
     fun hienThi(){
         println(String.format("%15s %15s %15s %15s", "Ten hang", "Don gia", "So luong", "Thanh tien"))
             var tong = 0.0

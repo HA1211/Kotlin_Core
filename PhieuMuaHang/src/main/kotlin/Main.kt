@@ -5,7 +5,7 @@ val listHang = ArrayList<HangHoa>()
 fun main() {
 
     var pmh = PhieuMuaHang()
-    pmh.nhapPhieu("PHIEU MUA HANG", 1,"PH01")
+    pmh.nhapPhieu("PH01")
 
     val hangHoa = HangHoa()
 
@@ -17,8 +17,6 @@ fun main() {
     listHang.add(h2)
     listHang.add(h3)
 
-
-    println(String.format("%40s", pmh.ten))
     pmh.show1()
     hangHoa.hienThi()
 
