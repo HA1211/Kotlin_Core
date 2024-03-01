@@ -10,12 +10,4 @@ class KySu(
         this.nganh = nganh
         this.namTN = namTN
     }
-    fun Nhap(){
-
-    }
-
-    fun Xuat(){
-
-    }
-
 }
